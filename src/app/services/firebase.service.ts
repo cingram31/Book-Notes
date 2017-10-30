@@ -30,7 +30,7 @@ export class FirebaseService {
   }
 
   getFavoriteBooks(){
-    this.favoriteBooks = this.db.list('/books').valueChanges() as Observable<any[]>;
+    this.favoriteBooks = this.db.list('/books').snapshotChanges() as Observable<any[]>;
     this.favoriteBooks.map(books => {
       const topRatedBooks = books.filter(item => item.rate > 4);
       return topRatedBooks;

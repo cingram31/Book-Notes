@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BookComponent implements OnInit {
   id: any;
-  title;
+  title="";
   author;
   dateadded;
   dateread;
@@ -23,6 +23,7 @@ export class BookComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
     this.firebaseService.getBookDetails(this.id).subscribe(book => {
+      console.log(book);
       this.title = book.title;
       this.author = book.author;
       this.dateadded = book.dateadded;

@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FirebaseService } from './services/firebase.service';
+import { AngularFireAuthModule} from 'angularfire2/auth';
 //import { AppDateAdapter } from "./adapter/AppDateAdapter";
 
 import { MatButtonModule,
@@ -72,6 +73,7 @@ export const APP_DATE_FORMATS =
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
     MatButtonModule,
