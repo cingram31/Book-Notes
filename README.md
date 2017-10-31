@@ -1,6 +1,7 @@
 # BookNotes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+This project can help you build your own personal library database of books and periodicals.
 
 ## Development server
 

@@ -15,8 +15,8 @@ export class BookComponent implements OnInit {
   dateread;
   price;
   rate;
-  description;
-  imageUrl;
+  description="";
+  imageUrl="";
 
   constructor(private firebaseService: FirebaseService, private router: Router, private route: ActivatedRoute) { }
 

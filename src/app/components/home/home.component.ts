@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
     this.firebaseService.getUnreadBooks().subscribe(ubBooks => {
       this.unreadBooks = ubBooks;
-      console.log('Unread Books', this.unreadBooks);
+      console.log('Unread Books', this.unreadBooks[0].payload.val());
     })
   }
 
